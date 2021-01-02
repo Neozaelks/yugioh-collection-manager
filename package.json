@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "ygo-progseries",
   "version": "1.0.0",
   "description": "",
@@ -10,19 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
-=======
-  "name": "yugioh-collection",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "start": "node app"
-  },
-  "description": "yugioh-collection",
-  "author": {
-    "name": ""
-  },
-  "dependencies": {
     "body-parser": "^1.15.0",
     "cookie-parser": "^1.4.0",
     "debug": "^2.2.0",
@@ -30,6 +16,5 @@
     "morgan": "^1.7.0",
     "pug": "^2.0.0-beta6",
     "serve-favicon": "^2.3.0"
->>>>>>> 300b32e... Base server
   }
 }
