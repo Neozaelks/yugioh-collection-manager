@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  
+  <title>Hello, world!</title>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-3 mt-2">
+        <h3>YGO Deckbuilder w/ collection</h3>
+        <div class="dropdown-divider"></div>
+        <img src="https://storage.googleapis.com/ygoprodeck.com/pics/27551.jpg" width="100%" alt="">
+        <div class="dropdown-divider"></div>
+        <button type="button" class="btn btn-primary">Import collection</button>
+        <button type="button" class="btn btn-primary">Import Deck</button>
+        <button type="button" class="btn btn-primary">Save Deck</button>
+        <div class="dropdown-divider"></div>
+        <p>Proudly brought to you by a petit con & a best waifu.</p>
+        <div class="dropdown-divider"></div>
+        <small class="fw-light fst-italic fs-6">The literal and graphical information presented on this site about Yu-Gi-Oh!, including card images, the attribute, level/rank and type symbols, and card text, is copyright 4K Media Inc, a subsidiary of Konami Digital Entertainment, Inc. This website is not produced by, endorsed by, supported by, or affiliated with 4k Media or Konami Digital Entertainment.</small>
+      </div>
+      <div class="col-6" style="text-align: center;">
+        <div class="mainDeckArea p-3" style="background-color: rgba(255, 166, 0, 0.377); min-height: 50vh;">
+          <h4>Main Deck</h4>
+          <div class="mainDecklist" style="max-width:100%; display: flex; align-items: center; flex-wrap: wrap;">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+          </div>
+        </div>
+        <div class="sideDeckArea p-3" style="background-color: rgba(0, 119, 255, 0.377);min-height: 20vh;">
+          <h4>Side Deck</h4>
+          <div class="sideDecklist" style="max-width:100%; display: flex; align-items: center; flex-wrap: wrap;">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+          </div>
+        </div>
+        <div class="extraDeckArea p-3" style="background-color: rgba(204, 0, 255, 0.377);min-height: 20vh;">
+          <h4>Extra Deck</h4>
+          <div class="extraDecklist" style="max-width:100%; display: flex; justify-content:center; align-items: center; flex-wrap: wrap;">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+            <img src="/assets/card-back.png" alt="" width="10%">
+          </div>
+        </div>
+      </div>
+      <div class="col-3" style="background-color: rgba(5, 255, 80, 0.377);">
+        <div class="searchArea">
+          <!--INPUT-->
+          <input type="search" class="form-control mt-2 mb-2" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Search by card name">
+          <div class="dropdown-divider"></div>
+          <!--BUTTONS-->
+          <h4>Sort By</h4>
+          <div class="btn-group mb-2">
+            <!-- Sort by Card Type-->
+            <div class="dropdown" style="margin-right: 1%;">
+              <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                Card type
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><h6><a class="dropdown-item fw-bold mb-2" href="#">Monsters</a></h6></li>
+                <li><a class="dropdown-item" href="#">Normal</a></li>
+                <li><a class="dropdown-item" href="#">Effect</a></li>
+                <li><a class="dropdown-item" href="#">Ritual</a></li>
+                <li><a class="dropdown-item" href="#">Synchro</a></li>
+                <li><a class="dropdown-item" href="#">XYZ</a></li>
+                <li><a class="dropdown-item" href="#">Link</a></li>
+                
+                <li><h6><a class="dropdown-item fw-bold mb-2 mt-2" href="#">Pendulum</a></h6></li>
+                <li><a class="dropdown-item" href="#">Pendulum Normal</a></li>
+                <li><a class="dropdown-item" href="#">Pendulum Effect</a></li>
+                <li><a class="dropdown-item" href="#">Pendulum Fusion</a></li>
+                <li><a class="dropdown-item" href="#">Pendulum Synchro</a></li>
+                <li><a class="dropdown-item" href="#">Pendulum XYZ</a></li>
+                
+                <li><h6><a class="dropdown-item fw-bold mb-2 mt-2" href="#">Spells</a></h6></li>
+                <li><a class="dropdown-item" href="#">Normal Spell</a></li>
+                <li><a class="dropdown-item" href="#">Continuous Spell</a></li>
+                <li><a class="dropdown-item" href="#">Equip Spell</a></li>
+                <li><a class="dropdown-item" href="#">Field Spell</a></li>
+                <li><a class="dropdown-item" href="#">Quick-Play Spell</a></li>
+                <li><a class="dropdown-item" href="#">Ritual Spell</a></li>
+                
+                <li><h6><a class="dropdown-item fw-bold mb-2 mt-2" href="#">Traps</a></h6></li>
+                <li><a class="dropdown-item" href="#">Normal Trap</a></li>
+                <li><a class="dropdown-item" href="#">Continuous Trap</a></li>
+                <li><a class="dropdown-item" href="#">Counter Trap</a></li>
+              </ul>
+            </div>
+            <!--Sort by Monster type-->
+            <div class="dropdown" style="margin-right: 1%;">
+              <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                Monster Type
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="#">Aqua</a></li>
+                <li><a class="dropdown-item" href="#">Beast</a></li>
+                <li><a class="dropdown-item" href="#">Beast-Warrior</a></li>
+                <li><a class="dropdown-item" href="#">Creator God</a></li>
+                <li><a class="dropdown-item" href="#">Cyberse</a></li>
+                <li><a class="dropdown-item" href="#">Dinosaur</a></li>
+                <li><a class="dropdown-item" href="#">Divine-Beast</a></li>
+                <li><a class="dropdown-item" href="#">Dragon</a></li>
+                <li><a class="dropdown-item" href="#">Fairy</a></li>
+                <li><a class="dropdown-item" href="#">Fiend</a></li>
+                <li><a class="dropdown-item" href="#">Fish</a></li>
+                <li><a class="dropdown-item" href="#">Insect</a></li>
+                <li><a class="dropdown-item" href="#">Machine</a></li>
+                <li><a class="dropdown-item" href="#">Plant</a></li>
+                <li><a class="dropdown-item" href="#">Psychic</a></li>
+                <li><a class="dropdown-item" href="#">Pyro</a></li>
+                <li><a class="dropdown-item" href="#">Reptile</a></li>
+                <li><a class="dropdown-item" href="#">Rock</a></li>
+                <li><a class="dropdown-item" href="#">Sea Serpent</a></li>
+                <li><a class="dropdown-item" href="#">Spellcaster</a></li>
+                <li><a class="dropdown-item" href="#">Thunder</a></li>
+                <li><a class="dropdown-item" href="#">Warrior</a></li>
+                <li><a class="dropdown-item" href="#">Winged Beast</a></li>
+                <li><a class="dropdown-item" href="#">Wyrm</a></li>
+                <li><a class="dropdown-item" href="#">Zombie</a></li>
+              </ul>
+            </div>
+            <!--Sort by Attribute-->
+            <div class="dropdown" style="margin-right: 1%;">
+              <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                Attribute
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="#">DARK</a></li>
+                <li><a class="dropdown-item" href="#">DIVINE</a></li>
+                <li><a class="dropdown-item" href="#">EARTH</a></li>
+                <li><a class="dropdown-item" href="#">FIRE</a></li>
+                <li><a class="dropdown-item" href="#">LIGHT</a></li>
+                <li><a class="dropdown-item" href="#">WATER</a></li>
+                <li><a class="dropdown-item" href="#">WIND</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="btn-group mb-2">
+            <!-- Sort by ATK -->
+            <div class="btn-group" style="margin-right: 1%;">
+              <button type="button" class="btn btn-primary">ATK</button>
+              <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="visually-hidden">Toggle Dropdown</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Sort by Increasing ATK</a></li>
+                <li><a class="dropdown-item" href="#">Sory by Decreasing ATK</a></li>
+              </ul>
+            </div>
+            <!-- Sort by DEF -->
+            <div class="btn-group" style="margin-right: 1%;">
+              <button type="button" class="btn btn-primary">DEF</button>
+              <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="visually-hidden">Toggle Dropdown</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Sort by Increasing DEF</a></li>
+                <li><a class="dropdown-item" href="#">Sory by Decreasing DEF</a></li>
+              </ul>
+            </div>
+            <!--Sort by Level/Rank-->
+            <div class="btn-group" style="margin-right: 1%;">
+              <button type="button" class="btn btn-primary">Level/Rank</button>
+              <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="visually-hidden">Toggle Dropdown</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Sort by Increasing Level/Rank</a></li>
+                <li><a class="dropdown-item" href="#">Sory by Decreasing Level/Rank</a></li>
+              </ul>
+            </div>
+          </div>
+          <!--Sort by Set-->
+        </div>
+        <div class="dropdown-divider"></div>
+        <div class="searchResults" style="max-width:100%; text-align: center; overflow-y: scroll; height: 75vh;">
+          <img src="/assets/card-back.png" alt="" width="30%">
+          <img src="/assets/card-back.png" alt="" width="30%">
+          <img src="/assets/card-back.png" alt="" width="30%">
+          <img src="/assets/card-back.png" alt="" width="30%">
+          <img src="/assets/card-back.png" alt="" width="30%">
+          <img src="/assets/card-back.png" alt="" width="30%">
+          <img src="/assets/card-back.png" alt="" width="30%">
+          <img src="/assets/card-back.png" alt="" width="30%">
+          <img src="/assets/card-back.png" alt="" width="30%">
+          <img src="/assets/card-back.png" alt="" width="30%">
+          <img src="/assets/card-back.png" alt="" width="30%">
+          <img src="/assets/card-back.png" alt="" width="30%">
+          <img src="/assets/card-back.png" alt="" width="30%">
+          <img src="/assets/card-back.png" alt="" width="30%">
+          <img src="/assets/card-back.png" alt="" width="30%">
+          <img src="/assets/card-back.png" alt="" width="30%">
+          <img src="/assets/card-back.png" alt="" width="30%">
+          <img src="/assets/card-back.png" alt="" width="30%">
+          <img src="/assets/card-back.png" alt="" width="30%">
+          <img src="/assets/card-back.png" alt="" width="30%">
+          <img src="/assets/card-back.png" alt="" width="30%">
+          <img src="/assets/card-back.png" alt="" width="30%">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>
