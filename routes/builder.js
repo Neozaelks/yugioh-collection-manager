@@ -19,7 +19,7 @@ router.get('/', function (req, res) {
     else {
         req.session.ydk.push('1')
     }*/
-    res.sendFile(path.join(__dirname, '../public', 'skull-deckbuilder.html'));
+    res.render('deckbuilder', {mainCards : [], sideCards: [], extraCards:[]});
 });
 
 router.post('/', upload.single('file'), function (req, res) {
