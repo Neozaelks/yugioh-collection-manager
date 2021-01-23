@@ -8,43 +8,64 @@ var multer = require('multer')
 
 const upload = multer({ storage: multer.memoryStorage() })
 
-
-/* GET users listing. */
 router.get('/', function (req, res) {
 
-
-    /*if (!req.session.ydk) {
-        req.session.ydk = ['1', '2', '3']
-    }
-    else {
-        req.session.ydk.push('1')
-    }*/
-    res.render('deckbuilder', {mainCards : [], sideCards: [], extraCards:[]});
-});
-
-router.post('/', upload.single('file'), function (req, res) {
     try {
-        data = String(req.file.buffer)
-        var data = data.split(/\r?\n|\r/).map(x => x.trim()).filter(id => id.length>0)
-        console.log(util.inspect(data, { maxArrayLength: null }))
+        if (!req.session.collection) {
+            req.session.collection = []
+        }
+        if (!req.session.main) {
+            req.session.main = []
+        }
+        if (!req.session.extra) {
+            req.session.extra = []
+        }
+        if (!req.session.side) {
+            req.session.side = []
+        }
 
-        var extraSeparator = data.indexOf("#extra")
-        var sideSeparator = data.indexOf("!side")
-        var main = data.slice(1, extraSeparator)
-        var extra = data.slice(extraSeparator + 1, sideSeparator)
-        var side = data.slice(sideSeparator + 1, data.length)
+
+        res.render('deckbuilder', { collection: req.session.collection, mainCards: req.session.main, sideCards: req.session.side, extraCards: req.session.extra });
     } catch (error) {
         console.log(error)
     }
 
-    console.log(main)
-    console.log(extra)
-    console.log(side)
+});
+
+router.post('/importDeck', upload.single('file'), function (req, res) {
     try {
-        res.render('deckbuilder', { mainCards: main, sideCards: side, extraCards: extra })
+        const parsedYdk = parse(req.file.buffer)
+        req.session.main =parsedYdk[0]
+        req.session.extra = parsedYdk[1]
+        req.session.side = parsedYdk[2]
+        res.redirect('/builder')
     } catch (error) {
         console.log(error)
     }
 })
+
+router.post('/importCollection', upload.single('file'), function (req, res) {
+    try {
+        const parsedYdk = parse(req.file.buffer)
+        req.session.collection = req.session.collection.concat(parsedYdk[0], parsedYdk[1], parsedYdk[2])
+        res.redirect('/builder')
+    } catch (error) {
+        console.log(error)
+    }
+})
+
+
+function parse(file) {
+    console.log("Entry")
+    try {
+        var data = String(file)
+        data = data.split(/\r?\n|\r/).map(x => x.trim()).filter(id => id.length > 0)
+        var extraSeparator = data.indexOf("#extra")
+        var sideSeparator = data.indexOf("!side")
+        return [data.slice(1, extraSeparator), data.slice(sideSeparator + 1, data.length), data.slice(extraSeparator + 1, sideSeparator)]
+    } catch (error) {
+        console.log(error)
+    }
+}
 
 module.exports = router;

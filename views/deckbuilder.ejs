@@ -12,10 +12,9 @@
 
   <script>
     function load(){
-    document.getElementById('buttonid').addEventListener('click', openDialog)
-    function openDialog(){
-      document.getElementById('fileid').click()
-    }
+    document.getElementById('collectionbutton').addEventListener('click', () => document.getElementById('collectionfile').click())
+    document.getElementById('deckbutton').addEventListener('click', () => document.getElementById('deckfile').click())
+
 
   }
   </script>
@@ -28,12 +27,17 @@
         <div class="dropdown-divider"></div>
         <img src="https://storage.googleapis.com/ygoprodeck.com/pics/27551.jpg" width="100%" alt="">
         <div class="dropdown-divider"></div>
-        <button type="button" class="btn btn-primary">Import collection</button>
 
-        <form id="import" method="POST" action="/builder" enctype="multipart/form-data">
-          <input id="fileid" type="file" name="file" hidden onchange="document.getElementById('submit').click()"/>
-          <input id="buttonid" type="button" class="btn btn-primary" value="Import Deck"/>
-          <input id="submit" type="submit" hidden/>
+        <form id="importCollection" method="POST" action="/builder/importCollection" enctype="multipart/form-data">
+          <input id="collectionfile" type="file" name="file" hidden onchange="document.getElementById('collectionsubmit').click()"/>
+          <input id="collectionbutton" type="button" class="btn btn-primary" value="Import Collection"/>
+          <input id="collectionsubmit" type="submit" hidden/>
+        </form>
+
+        <form id="importDeck" method="POST" action="/builder/importDeck" enctype="multipart/form-data">
+          <input id="deckfile" type="file" name="file" hidden onchange="document.getElementById('decksubmit').click()"/>
+          <input id="deckbutton" type="button" class="btn btn-primary" value="Import Deck"/>
+          <input id="decksubmit" type="submit" hidden/>
         </form>
         
         <button type="button" class="btn btn-primary">Save Deck</button>
@@ -200,28 +204,9 @@
         </div>
         <div class="dropdown-divider"></div>
         <div class="searchResults" style="max-width:100%; text-align: center; overflow-y: scroll; height: 75vh;">
-          <img src="static/images/card-back.png" alt="" width="30%">
-          <img src="static/images/card-back.png" alt="" width="30%">
-          <img src="static/images/card-back.png" alt="" width="30%">
-          <img src="static/images/card-back.png" alt="" width="30%">
-          <img src="static/images/card-back.png" alt="" width="30%">
-          <img src="static/images/card-back.png" alt="" width="30%">
-          <img src="static/images/card-back.png" alt="" width="30%">
-          <img src="static/images/card-back.png" alt="" width="30%">
-          <img src="static/images/card-back.png" alt="" width="30%">
-          <img src="static/images/card-back.png" alt="" width="30%">
-          <img src="static/images/card-back.png" alt="" width="30%">
-          <img src="static/images/card-back.png" alt="" width="30%">
-          <img src="static/images/card-back.png" alt="" width="30%">
-          <img src="static/images/card-back.png" alt="" width="30%">
-          <img src="static/images/card-back.png" alt="" width="30%">
-          <img src="static/images/card-back.png" alt="" width="30%">
-          <img src="static/images/card-back.png" alt="" width="30%">
-          <img src="static/images/card-back.png" alt="" width="30%">
-          <img src="static/images/card-back.png" alt="" width="30%">
-          <img src="static/images/card-back.png" alt="" width="30%">
-          <img src="static/images/card-back.png" alt="" width="30%">
-          <img src="static/images/card-back.png" alt="" width="30%">
+          <% collection.forEach(function(card) { %>
+            <img src="https://storage.googleapis.com/ygoprodeck.com/pics/<%= card %>.jpg" alt="" width="30%">
+          <% }); %> 
         </div>
       </div>
     </div>
